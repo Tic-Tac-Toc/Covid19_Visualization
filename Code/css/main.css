@@ -1,0 +1,64 @@
+.feature {
+    fill: white;
+    stroke: black;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+}
+
+.feature.region:hover {
+    fill: orange;
+    transition: all 0.2s ease-out;
+}
+
+.feature.region.active {
+    stroke-width: 0.5px;
+    transition: all 0.2s ease-out;
+}
+
+.background {
+    fill: none;
+    pointer-events: all;
+}
+
+div.tooltip {
+    position: absolute;
+    opacity:0.8;
+    z-index:1000;
+    text-align:left;
+    border-radius:4px;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    padding:8px;
+    color:#fff;
+    background-color:#000;
+    font: 12px sans-serif;
+    max-width: 300px;
+    max-height: 100px;
+}
+
+#all {
+    width: 2000;
+}
+
+#rightCol {
+    font-family: sans-serif;
+}
+
+#heatmap {
+    margin-top: 50px;
+    margin-right: 100px;
+    min-width: 600px;
+    min-height: 300px;
+    float: right;
+}
+
+#main {
+    float: left;
+    margin-top: 100px;
+}
+
+#density_chart {
+    float: right;
+    margin-right: 50px;
+    margin-bottom: 20px;
+}

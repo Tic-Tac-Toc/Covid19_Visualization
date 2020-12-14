@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <script type="text/javascript" src="js/d3.v6.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+    <script type="text/javascript" src="js/visualization.js"></script>
+    <!-- ColorBrewer CSS (https://github.com/mbostock/d3/tree/master/lib/colorbrewer) -->
+    <link rel="stylesheet" href="css/colorbrewer.css">
+    <link rel="stylesheet" href="css/main.css">
+    <meta charset="UTF-8">
+</head>
+
+<body onload="createViz()">
+    <div id="main">
+        <form>
+            <div>
+                <label for="male">Echelle : </label>
+                <select id="scale_choice">
+                    <option value="reg">Régionale</option>
+                    <option value="dept">Départementale</option>
+                </select>
+                <label for="male"> Affichage : </label>
+                <select id="display_choice">
+                    <option value="population">Population</option>
+                    <option value="density">Densité de population</option>
+                    <option value="incidence_rate">Taux d'incidence</option>
+                    <option value="mix_population">Population/Taux d'incidence</option>
+                    <option value="mix_density">Densité/Taux d'incidence</option>
+                    <option value="mix_shop">Commerces/Taux d'incidence</option>
+                    <option value="mix_shop_density">Densité de commerces/Taux d'incidence</option>
+                </select>
+                <div id="period_incidence_rate">
+                    <label for="male"> Période : </label>
+                    <select id="period_incidence">
+                        <option value="monthly">Mensuel (Moyenne)</option>
+                        <option value="daily">Quotidien (7 derniers jours)</option>
+                    </select>
+                    <label for="male"> Mois : </label>
+                    <select id="month">
+                    </select>
+                    <div id="daily_incidence" style="display: inline;">
+                        <label for="male"> Jour : </label>
+                        <select id="day">
+                            <option value="1">1</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="heatmap"></div>
+    <div id="density_chart"></div>
+</body>
+
+</html>
